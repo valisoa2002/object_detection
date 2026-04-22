@@ -11,6 +11,9 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
+// Pour les routes
+const detectRoutes = require("./routes/detection.route");
+
 sequelize
   .authenticate()
   .then(() => {
@@ -19,5 +22,7 @@ sequelize
   .catch((err) => {
     console.error("Unable to connect to the database:", err);
   });
+
+app.use("/api/detect", detectRoutes);
 
 app.listen(PORT, () => console.log(`Example app listening on port: ${PORT}!`));

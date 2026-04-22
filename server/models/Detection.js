@@ -1,11 +1,15 @@
 const { DataTypes } = require("sequelize");
-const { sequelize } = require("../database/connect");
+const sequelize = require("../database/connect");
 
 const Detection = sequelize.define("Detection", {
   id: {
     type: DataTypes.BIGINT,
     autoIncrement: true,
     primaryKey: true,
+  },
+  label: {
+    type: DataTypes.STRING,
+    allowNull: false,
   },
   confidence: {
     type: DataTypes.FLOAT,
