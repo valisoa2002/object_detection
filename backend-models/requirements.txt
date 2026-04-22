@@ -1,0 +1,6 @@
+fastapi
+ultralytics
+httpx
+uvicorn
+pydantic
+opencv-python
