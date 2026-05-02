@@ -106,7 +106,10 @@ module.exports = {
       { id: 77, name: "teddy bear", category: "Divers" },
       { id: 78, name: "hair drier", category: "Divers" },
       { id: 79, name: "toothbrush", category: "Divers" },
-    ]);
+    ]),
+      {
+        ignoreDuplicates: true,
+      };
   },
 
   async down(queryInterface, Sequelize) {

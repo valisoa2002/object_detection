@@ -13,6 +13,7 @@ app.add_middleware(
 )
 
 
+
 app = FastAPI()
 
 # Chargement du modèle YOLO26 une seule fois au démarrage
