@@ -1,7 +1,18 @@
 from fastapi import FastAPI, BackgroundTasks
 from pydantic import BaseModel
 from ultralytics import YOLO
-import httpx # Pour envoyer les données à Node.js
+import cv2
+import httpx
+import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # En développement, on autorise tout
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 app = FastAPI()
 
